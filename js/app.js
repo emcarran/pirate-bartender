@@ -1,4 +1,4 @@
-// contains all ingredients available to creat the drink.
+// contains all ingredients available to creat the drink. //array of flavor objects
 var pantry = {
     strong: ["glug of rum", "slug of whisky", "splash of gin"],
     salty: ["olive on a stick", "salt-dusted rim", "rasher of bacon"],
@@ -40,8 +40,8 @@ var generateRandomNumber = function (min, max) {
 
 // use if statements to piece together name conditionally based on the ingredients that comprise it
 var drinkNamer = function (concoction) {
-    var drinkNamerOutput = concoction[0].split('');
-    return 'yer Spakly' + toTitleCase(drinkNamerOutput[drinkNamerOutput.length - 1]) + 'Grog';
+    var drinkNamerOutput = concoction[0].split(' ');
+    return 'yer Sparkly ' + toTitleCase(drinkNamerOutput[drinkNamerOutput.length - 1]) + ' Grog,';
 }
 
 
@@ -57,7 +57,7 @@ $(document).ready(function () {
 
         //check if the each one of the ingredient types have been chosen and add that to the orderValues array;
         $('select').each(function () {
-            ordervalues.push($(this).val() == 'yes' ? true : false);
+            orderValues.push($(this).val() == 'yes' ? true : false);
         });
 
         //use the 2 constructors to create 2 new objects
@@ -77,6 +77,6 @@ $(document).ready(function () {
         $('.output ul').html(buildTheHtmlOutput);
 
         // name the customer's beverage with drinkNamer();
-        $('.output h3').html('Here be ' + drinkNamer(concoction) + 'ye scurvy scoundrel!');
+        $('.output h3').html('Here be ' + drinkNamer(concoction) + ' ye scurvy scoundrel!');
     });
 });

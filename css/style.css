@@ -122,6 +122,10 @@ Content styles (Main Module)
     .output {
         text-align: center;
     }
+
+    .buttonWrapper {
+        text-align: center;
+    }
     /* -------------------------------------
 place all the desktop styles above this line
 Responsive styles
