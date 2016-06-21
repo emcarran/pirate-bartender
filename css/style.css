@@ -1,0 +1,130 @@
+    /* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+        box-sizing: border-box;
+        /*reset Chrome user agent styles*/
+        -webkit-margin-before: 0px;
+        -webkit-margin-after: 0px;
+        -webkit-margin-start: 0px;
+        -webkit-margin-end: 0px;
+        -webkit-padding-before: 0px;
+        -webkit-padding-after: 0px;
+        -webkit-padding-start: 0px;
+        -webkit-padding-end: 0px;
+    }
+    /* General styles
+(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+
+    html {
+        background: rgba(0, 0, 0, 0) url("../images/background-image.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    body {
+        font-family: cursive;
+        color: whitesmoke;
+    }
+
+    ul {
+        list-style: none;
+    }
+    /* -------------------------------------
+Header styles (Main Module)
+(all the styles inside the < header > or < nav > tags)
+*/
+
+    .main,
+    .header {
+        width: 40%;
+        background-image: url("../images/transparent.jpg");
+        margin: 0 auto;
+        border-radius: 1rem;
+        padding: 10px;
+    }
+
+    .header {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+    }
+    /* -------------------------------------
+Content styles (Main Module)
+(all the styles inside the < sections > or < aside > tags)
+*/
+
+    .formGroup,
+    li {
+        display: block;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+
+    .formGroup: last-child,
+    li:last-child {
+        border: none;
+    }
+
+    label,
+    select {
+        display: inline-block;
+    }
+
+    label {
+        width: 80%;
+    }
+
+    select {
+        float: right;
+    }
+
+    .orderBtn {
+        text-align: center;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        padding: 0.5rem;
+        background-color: goldenrod;
+        width: 12rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .orderBtn,
+    .output {
+        text-align: center;
+    }
+    /* -------------------------------------
+place all the desktop styles above this line
+Responsive styles
+(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+place all the mobile tables styles bellow this line
+*/
